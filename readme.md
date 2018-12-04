@@ -1,14 +1,14 @@
-#DS-GULP
+# DS-GULP
 
 Základní šablona a devstack.
 
 
-##CSS
+## CSS
 
 Kompilaci do CSS řeší **Gulp.js**, je použit preprocesor **SASS** s post procesingem přes **postCSS**.
 
 
-###Základní struktura stylů
+### Základní struktura stylů
 
 * **css/styles.scss** - základní struktura stylů, propojení na další části
   * **css/base** - základní vlastnosti a styly, nastavení, typografie
@@ -24,21 +24,21 @@ Kompilaci do CSS řeší **Gulp.js**, je použit preprocesor **SASS** s post pro
   * **css/libs** - externí knihovny a styly
 
 
-##JavaScript
+## JavaScript
 
 Spojování souborů a minifikaci řeší **Gulp.js**.
 
 
-###Další použité knihovny
+### Další použité knihovny
 
 * **webfont.js** - loader pro Google Fonts, asynchronní odložené načítání - https://github.com/typekit/webfontloader
 
 
-##Gulp
+## Gulp
 
 Gulp řeší spojování, generování a minifikaci SASS a JS souborů, optimalizaci obrázků, autoprefixování, atd.
 
-###Gulp - instalace
+### Gulp - instalace
 
 * stáhnout a nainstalovat Node.js - https://nodejs.org/en/ (nutný restart počítače po první instalaci)
 * spustit konzoli a najít cestu k projektu (cd + přetáhnout adresář projektu)
@@ -47,7 +47,7 @@ Gulp řeší spojování, generování a minifikaci SASS a JS souborů, optimali
 * vytvoří se adresář "node_modules" který neverzovat a nezasahovat do něj
 * po instalaci stačí zadat `gulp` který bude hlídat změnu souborů a generovat potřebné
 
-###Gulp - použití
+### Gulp - použití
 
 * Před použitím je potřeba upravit lokální URL adresu v souboru `gulpfile.js`.
 * Základní task `gulp` provádí sledování změn, spojování CSS a JS souborů...
