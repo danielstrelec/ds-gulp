@@ -1,0 +1,76 @@
+// tabulka
+.table {
+  width: 100%;
+  margin-bottom: 10px;
+
+  border-top: 1px solid $color_main;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 1px solid $color_main;
+
+  tr {
+    &:hover td {
+      background-color: $color_main_light; // zvýraznění řádku po najetí myší
+    }
+
+    &:nth-child(odd) td {
+      background-color: $color_main_light; // zebra stripping
+    }
+  }
+
+  th,
+  td {
+    padding: 3px;
+
+    border-top: 0;
+    border-right: 1px solid $color_main;
+    border-bottom: 1px solid $color_main;
+    border-left: 0;
+
+    @media (min-width: $mqsm) {
+      padding: 8px 10px;
+    }
+  }
+
+  // rozlámání tabulky na malých rozlišeních
+  @media only screen and (max-width: $mqxs) {
+    display: block;
+
+    th,
+    td,
+    tr,
+    thead,
+    tbody {
+      display: block;
+    }
+
+    th + th {
+      border-top: 1px solid $color_main_light;
+    }
+
+    tr td:last-child {
+      border-bottom: 2px solid $color_main;
+    }
+  }
+
+  // hlavička tabulky
+  th {
+    color: $color_white;
+
+    border-right: 1px solid lighten( $color_main, 5% );
+    background-color: $color_main;
+
+    &:last-child {
+      border-right: 1px solid $color_main;
+    }
+  }
+}
+
+// vertikální tabulka
+.table--vertical {
+  th {
+    text-align: left;
+
+    border-bottom: 1px dotted $color_main_light;
+  }
+}

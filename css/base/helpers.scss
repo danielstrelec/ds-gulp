@@ -1,0 +1,25 @@
+// zarovnání textu
+.center { text-align: center; }
+.left { text-align: left; }
+.right { text-align: right; }
+
+// nezalamování
+.nowrap { white-space: nowrap; }
+
+// floatování
+.fleft { float: left; }
+.fright { float: right; }
+.cls { clear: both; }
+
+// micro clearfix ( http://nicolasgallagher.com/micro-clearfix-hack/ )
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}

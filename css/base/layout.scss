@@ -1,0 +1,76 @@
+// hlavní kontejner
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+// řádek mřížky
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// řádek se stejně vysokými bloky
+.row--align {
+
+  & > .col {
+    flex-direction: row;
+  }
+
+}
+
+// mezery mezi bloky
+.row--space {
+  justify-content: space-between;
+}
+
+// centrování
+.row--center {
+  align-items: center;
+}
+
+// blok mřížky, standardně dva vedle sebe
+.col {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+}
+// dva vedle sebe
+.col--2 {
+  @media (min-width: $mqxs) {
+    flex-basis: 50%;
+  }
+}
+// tři vedle sebe
+.col--3 {
+  @media (min-width: $mqxs) {
+    flex-basis: 33.33333333%;
+  }
+}
+// čtyři vedle sebe
+.col--4 {
+  @media (min-width: $mqxs) {
+    flex-basis: 25%;
+  }
+}
+// pět vedle sebe
+.col--5 {
+  @media (min-width: $mqxs) {
+    flex-basis: 20%;
+  }
+}
+
+// zarovnání pravou stranu
+.col--end {
+  align-items: flex-end;
+}
+
+// zarovnání levou stranu
+.col--start {
+  align-items: flex-start;
+}
+
+// zarovnání na střed
+.col--center {
+  align-items: center;
+}
